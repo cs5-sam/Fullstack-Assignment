@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #container{
+            padding: 10px;
+        }
+        body{
+            background: #b2fefa;
+        }
+        
+            /* BREAKPOINT - 1 */
+            @media (min-width:1151px){
+                
+                #banner{
+                    background:url(../img/banner.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    color: #fff;
+                    height: 450px;
+                    margin-top: 70px;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                #section-1{
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 10px;
+                }
+                #name{
+                    background-color: yellowgreen;
+                    float: left;
+                    width: 250px;
+                    height: 250px;
+                    color: #fff;
+                    border-radius: 250px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 28px;
+                }
+                #section-2{
+                    margin-bottom: 20px;
+                    clear: both;
+                }
+                #section-2::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                #right{
+                    float: left;
+                    width: 59%;
+                    margin-top: 10px;
+                    background-color: rgb(131, 141, 151);
+                    height: 399px;
+                    display: flex;
+                    justify-items: center;
+                    align-content: center;
+                    color: #fff;
+                    border-radius: 10px;
+                }
+                #right p{
+                    padding: 10px;
+                    letter-spacing: 1.5px;
+                    word-spacing: 2px;
+                    text-align: justify;
+                }
+                #left{
+                    width: 40%;
+                    float: right;
+                    margin-top: 10px;
+                    height: 399px;
+                }
+                #article{
+                    height: 125px;
+                    background-color: teal;
+                    color: #000;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    display: flex;
+                    border-radius: 10px;
+                    margin-bottom: 12px;
+                }
+                #section-3{
+                    clear: both;
+                }
+                #section-3::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                    margin-bottom: 10px;
+                }
+                #footer{
+                    background-color: #1c92d2;
+                    color: #fff;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90px;
+                }
+                #footer a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+                #footer p{
+                    text-align: center;
+                }
+                nav ul{
+                    list-style-type: none;
+                    display: flex;
+                    position: fixed;
+                    height: 60px;
+                    line-height: 30px;
+                    overflow: hidden;
+                    width: 100%;
+                    padding: 10px;
+                    z-index: 1;
+                    background-color: lightslategray;
+                }
+                nav ul li{
+                    display: inline-block;
+                }
+                nav ul li a{
+                    text-decoration: none;
+                    padding: 15px 20px;
+                    display: block;
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width: 150px;
+                }
+                nav ul li a:hover{
+                    color: #000;
+                    background: #fff;
+                }
+                .banner-text{
+                    position: unset;
+                    margin: 30px;
+                    font-size: 3rem;
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                }
+                .box{
+                width: 21%;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 10px;
+                float: left;
+                margin: 23px;
+            }
+            .box{
+                /* background-color: rgb(166, 169, 172); */
+                background-image: url('../img/blue.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .box h4{
+                color: #f5e5e5;
+                margin-top: 10px;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box img{
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+            }
+            .box p{
+                text-align: justify;
+                width: 90%;
+                padding: 10px;
+                line-height: 1.3rem;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a{
+                width: 90%;
+                height: 20%;
+                padding: 10px;
+                display: block;
+                text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                background-color: red;
+                color: #fff;
+                border-radius: 5px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a:hover{
+                background-color: #1c92d2;
+            }
+        }
+
+
+        /* BREAKPOINT - 2 */
+        @media (min-width: 784px) and (max-width: 1150px) {
+            
+            #banner{
+                    background:url(../img/banner.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    color: #fff;
+                    height: 450px;
+                    margin-top: 90px;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                #section-1{
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 10px;
+                }
+                #name{
+                    background-color: yellowgreen;
+                    float: left;
+                    width: 250px;
+                    height: 250px;
+                    color: #fff;
+                    border-radius: 250px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 65px;
+                }
+                #section-2{
+                    margin-bottom: 20px;
+                    clear: both;
+                }
+                #section-2::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                #right{
+                    float: left;
+                    width: 59%;
+                    margin-top: 10px;
+                    background-color: rgb(131, 141, 151);
+                    height: 399px;
+                    display: flex;
+                    justify-items: center;
+                    align-content: center;
+                    color: #fff;
+                    border-radius: 10px;
+                }
+                #right p{
+                    padding: 10px;
+                    letter-spacing: 1.5px;
+                    word-spacing: 2px;
+                    text-align: justify;
+                }
+                #left{
+                    width: 40%;
+                    float: right;
+                    margin-top: 10px;
+                    height: 399px;
+                }
+                #article{
+                    height: 125px;
+                    background-color: teal;
+                    color: #000;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    display: flex;
+                    border-radius: 10px;
+                    margin-bottom: 12px;
+                }
+                #section-3{
+                    clear: both;
+                }
+                #section-3::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                    margin-bottom: 10px;
+                }
+                #footer{
+                    background-color: #1c92d2;
+                    color: #fff;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90px;
+                }
+                #footer a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+                #footer p{
+                    text-align: center;
+                }
+                nav ul{
+                    list-style-type: none;
+                    display: flex;
+                    position: fixed;
+                    height: 60px;
+                    line-height: 30px;
+                    overflow: hidden;
+                    width: 100%;
+                    padding: 10px;
+                    z-index: 1;
+                    background-color: lightslategray;
+                }
+                nav ul li{
+                    display: inline-block;
+                }
+                nav ul li a{
+                    text-decoration: none;
+                    padding: 15px 20px;
+                    display: block;
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width: 150px;
+                }
+                nav ul li a:hover{
+                    color: #000;
+                    background: #fff;
+                }
+                .banner-text{
+                    position: unset;
+                    margin: 30px;
+                    font-size: 3rem;
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                }
+                .box{
+                width: 40%;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 10px;
+                float: left;
+                margin: 37px;
+            }
+            .box{
+                /* background-color: rgb(166, 169, 172); */
+                background-image: url('../img/blue.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .box h4{
+                color: #f5e5e5;
+                margin-top: 10px;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box img{
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+            }
+            .box p{
+                text-align: justify;
+                width: 90%;
+                padding: 10px;
+                line-height: 1.3rem;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a{
+                width: 90%;
+                height: 20%;
+                padding: 10px;
+                display: block;
+                text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                background-color: red;
+                color: #fff;
+                border-radius: 5px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a:hover{
+                background-color: #1c92d2;
+            }
+        }
+
+        /* BREAKPOINT - 3 */
+        @media (min-width: 360px) and (max-width: 783px) {
+            
+            #banner{
+                    background:url(../img/banner.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 10px;
+                    color: #fff;
+                    height: 450px;
+                    margin-top: 90px;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                #section-1{
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 10px;
+                }
+                #name{
+                    background-color: yellowgreen;
+                    float: left;
+                    width: 300px;
+                    height: 300px;
+                    color: #fff;
+                    border-radius: 350px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 50px;
+                }
+                #section-2{
+                    margin-bottom: 20px;
+                    clear: both;
+                }
+                #section-2::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+                #right{
+                    clear: both;
+                    width: 100%;
+                    margin-top: 10px;
+                    background-color: rgb(131, 141, 151);
+                    height: 399px;
+                    display: flex;
+                    justify-items: center;
+                    align-content: center;
+                    color: #fff;
+                    border-radius: 10px;
+                }
+                #right p{
+                    padding: 10px;
+                    letter-spacing: 1.5px;
+                    word-spacing: 2px;
+                    text-align: justify;
+                }
+                #left{
+                    width: 100%;
+                    margin-top: 10px;
+                    height: 399px;
+                }
+                #article{
+                    height: 125px;
+                    background-color: teal;
+                    color: #000;
+                    width: 100%;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    display: flex;
+                    border-radius: 10px;
+                    margin-bottom: 12px;
+                }
+                #section-3{
+                    clear: both;
+                }
+                #section-3::after{
+                    content: '';
+                    display: block;
+                    clear: both;
+                    margin-bottom: 10px;
+                }
+                #footer{
+                    background-color: #1c92d2;
+                    color: #fff;
+                    margin-top: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90px;
+                }
+                #footer a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+                #footer p{
+                    text-align: center;
+                }
+                nav ul{
+                    list-style-type: none;
+                    display: flex;
+                    position: fixed;
+                    height: 60px;
+                    line-height: 30px;
+                    overflow: hidden;
+                    width: 100%;
+                    padding: 10px;
+                    z-index: 1;
+                    background-color: lightslategray;
+                }
+                nav ul li{
+                    display: inline-block;
+                }
+                nav ul li a{
+                    text-decoration: none;
+                    padding: 15px 20px;
+                    display: block;
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                    width: 150px;
+                }
+                nav ul li a:hover{
+                    color: #000;
+                    background: #fff;
+                }
+                .banner-text{
+                    position: unset;
+                    margin: 30px;
+                    font-size: 3rem;
+                    padding-top: 10px;
+                    text-transform: uppercase;
+                }
+                .box{
+                width:85%;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 10px;
+                float: left;
+                margin: 50px;
+            }
+            .box{
+                /* background-color: rgb(166, 169, 172); */
+                background-image: url('../img/blue.jpg');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            .box h4{
+                color: #f5e5e5;
+                margin-top: 10px;
+                text-align: center;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box img{
+                width: 100%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 5px;
+            }
+            .box p{
+                text-align: justify;
+                width: 90%;
+                padding: 10px;
+                line-height: 1.3rem;
+                color: #fff;
+                margin-left: auto;
+                margin-right: auto;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a{
+                width: 90%;
+                height: 20%;
+                padding: 10px;
+                display: block;
+                text-decoration: none;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                background-color: red;
+                color: #fff;
+                border-radius: 5px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+            .box a:hover{
+                background-color: #1c92d2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- <img src="image address" alt="image"> -->
+        <h1>&lt;/&gt;<span id="header-title">FullStack</span></h1>
+    </div>
+    <input type="checkbox" name="" id="chk">
+    <label for="chk"  class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk"  class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#section-1"><i class="fa fa-user"><span>Team</span></i></a></li>
+            <li><a href="#section-2"><i class="fa fa-tasks"><span>About Us</span></i></a></li>
+            <li><a href="#section-3"><i class="fa fa-rss"><span>Technology</span></i></a></li>
+            <li><a href="#footer"><i class="fa fa-id-card"><span>Contact Us</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href="#"><i class="fa fa-facebook-square"></i></a>
+            <a href="#"><i class="fa fa-youtube-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <div id="container">
+        
+        <div id="banner"><p class="banner-text">Practical-10</p></div>
+        <div id="section-1">
+            <h2>Team</h2>
+            <div id="name" style="background-image: url(../img/user_1.png); background-position:center ;
+            background-size:cover ;"></div>
+            <div id="name" style="background-image: url(../img/user_2.png); background-position:center ;
+            background-size:cover ;"></div>
+            <div id="name" style="background-image: url(../img/user_3.png); background-position:center ;
+            background-size:cover ;"></div>
+            <div id="name" style="background-image: url(../img/user_4.png); background-position:center ;
+            background-size:cover ;"></div>
+        </div>
+        <div id="section-2">
+            <h2>About Us</h2>
+            <div id="right"><p><span style="font-weight: 700; font-size: 1.3rem;">About Projects</span>
+                <br>
+                <br>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Fugiat expedita culpa adipisci cumque nihil, consectetur voluptatibus veritatis distinctio reprehenderit 
+                repudiandae modi ad doloremque incidunt illo porro quia cupiditate temporibus impedit maiores consequatur eum 
+                laborum eaque corrupti. Ullam vitae ratione quae at recusandae temporibus similique tenetur laudantium ipsum soluta atque 
+                voluptate obcaecati itaque omnis earum, quaerat tempora. Sunt consequuntur earum vel. Quod animi assumenda repellendus voluptatibus
+                iusto reiciendis repudiandae commodi dolor, ratione sequi quaerat dolores sit omnis soluta inventore unde ad optio distinctio, 
+                =harum praesentium corporis natus voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis harum quia molestiae
+            </p>
+            </div>
+            <div id="left">
+                <div id="article" style="background-image: url(../img/art_1.jpg); background-position: top;
+                background-size:cover ;"><p style="margin-left: 42%;">PROJECT-1</p></div>
+                <div id="article" style="background-image: url(../img/art_2.jpeg); background-position:top ;
+                background-size:cover ;"><p style="margin-left: 42%;">PROJECT-2</p></div>
+                <div id="article" style="background-image: url(../img/art_3.jpeg); background-position:top ;
+                background-size:cover ;"><p style="margin-left: 42%;">PROJECT-3</p></div>
+            </div>
+        </div>
+        <div id="section-3">
+            <h2>Technologies</h2>
+            <div class="box">
+                <img src="../img/intro.png" alt="html">
+                <h4>Introduction to HTML</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex explicabo, sunt quasi excepturi rem a possimus quo odit eaque repellendus.</p>
+                <a href="../page/practical-5-html.html" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="../img/css-introduction.jpg" alt="css">
+                <h4>Introduction to CSS</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex explicabo, sunt quasi excepturi rem a possimus quo odit eaque repellendus.</p>
+                <a href="../page/practical-5-css.html" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="../img/js-intro.jpg" alt="javascript">
+                <h4>Introduction to JavaScript</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex explicabo, sunt quasi excepturi rem a possimus quo odit eaque repellendus.</p>
+                <a href="../page/practical-5-js.html" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <img src="../img/bs-intro.jpg" alt="bootstrap">
+                <h4>Introduction to BootStrap</h4>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex explicabo, sunt quasi excepturi rem a possimus quo odit eaque repellendus.</p>
+                <a href="../page/practical-5-bs.html" class="btn">Read more</a>
+            </div>
+        </div>
+        <h2>Contact Us</h2>
+        
+    </div>
+    <div id="footer">
+        <p>Website Template for Practical-8&nbsp;<a href="#"> &copy; Beta-Labs</a>
+    <br>
+    <br>
+    <a href="#">Back to top</a>
+</p>
+    </div>
+</body>
+</html>
