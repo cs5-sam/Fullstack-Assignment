@@ -57,8 +57,9 @@
         var count=0;
         var d = document.getElementById("display");
         function reduce(){
-            if(count < 1){
-                alert("Counter reached 0")
+            if(count <= 0){
+                // alert("Counter reached 0")
+                document.getElementById("reduce").disabled=true;
                 count = 0;
             }
             else{
@@ -69,6 +70,9 @@
         }
         function increase(){
             count++;
+            if(count > 0){
+                document.getElementById("reduce").disabled=false;
+            }
             console.log(count);
             d.innerText = count;
         }
