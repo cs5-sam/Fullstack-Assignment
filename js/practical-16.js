@@ -19,9 +19,9 @@ function create(e){
 
     if(todoInput.value.length === 0){
         warningg.classList.add("show");
-        setTimeout(function(){
-            $('.warning').fadeOut('fast');
-        },3000);
+//         setTimeout(function(){
+//             $('.warning').fadeOut('fast');
+//         },3000);
     }
     else{
     
